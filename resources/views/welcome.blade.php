@@ -31,6 +31,7 @@
             </div>            
         </header> 
         <section class="container jost-weight section1">
+            <h1 class="d-none">Калькулятор заработка GTA 5 RP</h1>
             <div class="text-center main-description">
                 ЛУЧШИЙ ФИНАНСОВЫЙ ИНСТРУМЕНТ В МИРЕ GTA 5 RP
             </div>
