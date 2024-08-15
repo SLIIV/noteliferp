@@ -37,9 +37,10 @@ header {
 .get-started-link {
     background-image: url('/build/assets/images/login.png');
     background-repeat: no-repeat;
-    padding-left: 44px;  /* width of the image plus a little extra padding */
-    padding-top: 4px;
-    margin-top: 10px;
+    background-size: 26%;
+    padding-left: 35px;  /* width of the image plus a little extra padding */
+    padding-top: 0px;
+    margin-top: 15px;
     height: 100%;
     font-weight: bold;
 }
