@@ -104,9 +104,9 @@
                             @endif
                             @endforeach
                         </div>
-                            <!-- <div class="col-6">
+                        <div class="col-5 ms-5">
                                 <canvas id="myChart"></canvas>
-                            </div> -->
+                        </div>
                     </div>
                     
                 </form>
@@ -178,5 +178,6 @@
             var triggerEl = document.querySelector("#navId a");
             bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
         </script>
+
     </section>
 @endsection

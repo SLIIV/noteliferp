@@ -6,6 +6,7 @@ use App\Models\Categories;
 use App\Models\Incomes;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 
 class DashboardController extends Controller
 {
@@ -55,8 +56,13 @@ class DashboardController extends Controller
     public function GetDashboardInfo() {
         $categories = Categories::where('user_id', auth()->id())->get();
         $incomes = Incomes::where('user_id', auth()->id())->get()->sortByDesc('created_at');
-        $incomesToday = Incomes::where('user_id', auth()->id())->where('created_at', '>', Carbon::yesterday())->sum('income');
+        $incomesToday = Incomes::where('user_id', auth()->id())->where('created_at', '>', Carbon::now()->add(-1, 'days'))->sum('income');
         $allTimeIncomes = Incomes::where('user_id', auth()->id())->sum('income');
-        return view('dashboard')->with(compact('categories', 'incomes','incomesToday', 'allTimeIncomes'));
+        $weekSums = collect([]);
+        for($i = 6; $i > 0; $i--) {
+            $weekSums->push(Incomes::where('user_id', auth()->id())->where('created_at', '>', Carbon::now()->add(-$i, 'days'))->where('created_at', '<', Carbon::now()->add(-$i + 1, 'days'))->sum('income'));
+        }
+        //dd($weekSums);
+        return view('dashboard')->with(compact('categories', 'incomes','incomesToday', 'allTimeIncomes', 'weekSums'));
     }
 }
