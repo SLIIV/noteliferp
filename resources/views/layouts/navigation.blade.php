@@ -46,32 +46,12 @@
                 </div>
             </div>            
         </header> 
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-            const ctx = document.getElementById('myChart');
-
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: [new Date().getDate()-5, new Date().getDate()-4, new Date().getDate()-3, new Date().getDate()-2, new Date().getDate()-1, new Date().getDate()],
-    datasets: [{
-      label: 'Прибыль',
-      data: ["{{$weekSums[0]}}", "{{$weekSums[1]}}", "{{$weekSums[2]}}", "{{$weekSums[3]}}", "{{$weekSums[4]}}", "{{$weekSums[5]}}"],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
-        </script>
+    
+    
     <script>
   
 </script>

@@ -38,7 +38,7 @@
             <div class="text-center second-description">
                 ДОСТИГАЙТЕ УСПЕХА С НАМИ!
             </div>
-            <a href="" class="text-decoration-none">
+            <a href="{{route('dashboard')}}" class="text-decoration-none">
                 <div class="mx-auto get-started-button">
                     НАЧАТЬ
                 </div>
