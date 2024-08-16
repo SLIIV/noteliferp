@@ -38,7 +38,14 @@
             <div class="text-center second-description">
                 ДОСТИГАЙТЕ УСПЕХА С НАМИ!
             </div>
-            <a href="{{route('dashboard')}}" class="text-decoration-none">
+            <div
+                class="alert alert-primary text-center mt-4"
+                role="alert"
+            >
+                Сайт находится в разработке и не отражает финального результата
+            </div>
+            
+            <a href="{{route('register')}}" class="text-decoration-none">
                 <div class="mx-auto get-started-button">
                     НАЧАТЬ
                 </div>
