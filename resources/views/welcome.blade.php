@@ -84,20 +84,38 @@
         <section class="section2">
             <div class="container">
                 <div class="text-center main-description">
-                    ОТ ФАРМИЛ ДЛЯ ФАРМИЛ
+                    КАЛЬКУЛЯТОР ПРИБЫЛИ
                 <div>
-                <div class="text-center second-description mt-5">
-                    Мы создали лучший инструмент для анализа своих расходов и доходов. Благодаря функционалу нашего сервиса, 
-                    вы сможете удобно оптимизировать свои расходы и определять наиболее прибыльные инвестиции.
+                <div class="row">
+                    <div class="col-5">
+                        <div class="text-start second-description mt-5">
+                            Мы создали лучший калькулятор прибыли GTA 5 RP для анализа своих расходов и доходов. Благодаря функционалу нашего сервиса, 
+                            вы сможете удобно оптимизировать свои расходы. А наша статистика поможет выбрать наиболее прибыльные инвестиции.
+                        </div>
+                    </div>
+                    <div class="col-5 ms-auto pt-4">
+                        <picture>
+                            <img
+                                src="{{asset('build/assets/images/main_left.png')}}"
+                                class="img-fluid"
+                            />
+                        </picture>
+                    </div>
                 </div>
-                <div class="text-center main-description mt-5">
+                
+                <!-- <div class="text-center main-description mt-5">
                     СОЗДАВАЙТЕ КАТЕГОРИИ
                 <div>
                 <div class="text-center second-description mt-5">
                 Удобный инструмент создания категорий позволит легко анализировать доходы и расходы, собирать статистику за определённый период, а также максимально оптимизировать свой бизнес.
-                </div>
+                </div> -->
             </div>
         </section>
+        <footer>
+            <div>
+                Это подвал. На данный момент он бесполезен, но скоро здесь что-то появится :)
+            </div>
+        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>

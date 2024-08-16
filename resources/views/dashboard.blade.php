@@ -149,11 +149,11 @@
                             <form action="{{route('dashboard.category.destroy', $category)}}" method="post">
                             @csrf
                             @method('DELETE')
-                                <button type="submit" class="bg-transparent border-0">
+                                <!-- <button type="submit" class="bg-transparent border-0">
                                     <div class="remove">
                                         Удалить
                                     </div>
-                                </button>
+                                </button> -->
                             </form>
                         </div>
                         @endforeach
