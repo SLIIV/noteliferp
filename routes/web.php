@@ -17,7 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [DashboardController::class, 'GetDashboardInfo'])->name('dashboard');
-    Route::delete('/dashboard/{category}', [DashboardController::class, 'destroyCategory'])->name('dashboard.category.destroy');
+    Route::delete('/dashboard?cat={category}', [DashboardController::class, 'destroyCategory'])->name('dashboard.category.destroy');
     Route::post('/dashboard/category', [DashboardController::class, 'storeCategory'])->name('dashboard.category.store');
     Route::post('/dashboard', [DashboardController::class, 'storeIncome'])->name('dashboard.income.store');
     Route::get('/dashboard/statistics', [StatisticsController::class, 'GetStatistics'])->name('stats');
