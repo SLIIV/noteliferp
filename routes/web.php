@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StatisticsController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Categories;
 use App\Models\Incomes;
@@ -19,6 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/dashboard/{category}', [DashboardController::class, 'destroyCategory'])->name('dashboard.category.destroy');
     Route::post('/dashboard/category', [DashboardController::class, 'storeCategory'])->name('dashboard.category.store');
     Route::post('/dashboard', [DashboardController::class, 'storeIncome'])->name('dashboard.income.store');
+    Route::get('/dashboard/statistics', [StatisticsController::class, 'GetStatistics'])->name('stats');
+    Route::get('/dashboard/statistics/categoryStats', [StatisticsController::class, 'GetCategoryStats'])->name('categoryStats');
 });
 
 

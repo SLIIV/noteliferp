@@ -181,24 +181,24 @@
         <script>
             const ctx = document.getElementById('myChart');
 
-new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: [new Date().getDate()-5, new Date().getDate()-4, new Date().getDate()-3, new Date().getDate()-2, new Date().getDate()-1, new Date().getDate()],
-    datasets: [{
-      label: 'Прибыль',
-      data: ["{{$weekSums[0]}}", "{{$weekSums[1]}}", "{{$weekSums[2]}}", "{{$weekSums[3]}}", "{{$weekSums[4]}}", "{{$weekSums[5]}}"],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
-    }
-  }
-});
+            new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [new Date().getDate()-5, new Date().getDate()-4, new Date().getDate()-3, new Date().getDate()-2, new Date().getDate()-1, new Date().getDate()],
+                datasets: [{
+                label: 'Прибыль',
+                data: ["{{$weekSums[0]}}", "{{$weekSums[1]}}", "{{$weekSums[2]}}", "{{$weekSums[3]}}", "{{$weekSums[4]}}", "{{$weekSums[5]}}"],
+                borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                y: {
+                    beginAtZero: true
+                }
+                }
+            }
+            });
         </script>
     </section>
 @endsection

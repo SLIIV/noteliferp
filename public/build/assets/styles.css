@@ -1,13 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+	height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
 .blue {
     background-color: #25244E;
     padding: 0;
     margin: 0;
+    
 }
+
 header {    
     background: #1F2858;
     padding: 0;
     margin: 0;
 }
+
+footer {
+    background: #1F2858;
+    height: 75px;
+    flex: 0 0 auto;
+}
+
 
 .cont-header { 
     width: 100%;
@@ -18,7 +45,8 @@ header {
 }
 
 .logo, .get-started {
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     align-self: flex-end;
 
 }
@@ -56,6 +84,14 @@ header {
 div {
     color: #fff;
 }
+
+.daterangepicker div {
+    color:#1F2858;
+}
+
+.dates div {
+    color:#1F2858;
+}
 .jost-weight {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
@@ -68,10 +104,12 @@ div {
     font-size: 36px;
     padding-top: 40px;
     font-weight: bold;
+    color: #fff;
 }
 .second-description {
     font-size: 28px;
     font-weight: bold;
+    color: #fff;
 }
 
 .get-started-button {
@@ -150,3 +188,7 @@ div {
 .remove {
     color: red;
 }
+.datepicker {
+    background-color:#00ff11;
+    color: #d6d6d6;
+ }
